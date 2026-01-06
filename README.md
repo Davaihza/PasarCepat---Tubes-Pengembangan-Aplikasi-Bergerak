@@ -61,7 +61,8 @@ Proyek ini dibangun menggunakan teknologi dan library berikut:
 3.  **Sinkronisasi Gradle**
     *   Tunggu hingga Android Studio selesai mengunduh dependencies dan melakukan indexing.
 4.  **Konfigurasi Firebase**
-    *   Pastikan file `google-services.json` sudah ada di folder `app/`. (Catatan: File ini biasanya tidak di-upload ke public repo demi keamanan, pastikan Anda memilikinya dari konsol Firebase).
+    *   Pastikan file `google-services.json` sudah ada di folder `app/`.
+    *   **Catatan Keamanan**: File `google-services.json` **tidak disertakan** di dalam repository ini demi keamanan data (berisi API Key). Jika Anda adalah dosen pengampu atau ingin menjalankan aplikasi ini, silakan hubungi pengembang untuk mendapatkan file tersebut secara langsung, atau Anda dapat menggunakan file konfigurasi Firebase Anda sendiri.
 5.  **Run**
     *   Sambungkan perangkat Android atau gunakan Emulator.
     *   Klik tombol **Run** (▶️) di toolbar.
