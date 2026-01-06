@@ -72,5 +72,5 @@ Proyek ini dibangun menggunakan teknologi dan library berikut:
 *   Aplikasi ini dioptimalkan untuk orientasi Portrait.
 
 ---
-**Dibuat oleh:** [Nama Anda/Tim Anda]
-**Untuk:** Tugas Besar [Mata Kuliah/Program Studi]
+**Dibuat oleh:** Dava Ihza Bagus Setyawan
+**Untuk:** Tugas Besar Pengembangan Aplikasi Bergerak/Sistem Informasi
