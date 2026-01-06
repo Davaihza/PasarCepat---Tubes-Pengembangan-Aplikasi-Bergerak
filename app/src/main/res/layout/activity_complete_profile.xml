@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="false"
+    android:padding="24dp">
+
+    <!-- Assuming header is simple text, no back button shown in "Profile & Password" image but standard app flow usually has one. 
+         The image "uploaded_image_0" doesn't show a top bar back chevron like the "Register Account" one (which is image 1, wait).
+         Let's re-verify image descriptions.
+         Image 0 (Profile & Password): Shows specific time, status bar. No back chevron visible in the crop? 
+         Wait, image 1 (Register Account) clearly shows a back chevron.
+         Image 0 is "Profile & Password", it might be a step 2 so maybe no back button to step 1? Or just not in crop.
+         I'll add a back button to be safe/consistent, or maybe it's "Step 2/2".
+         Actually, usually you can go back. I'll add it.
+    -->
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile &amp; Password"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Lengkapi data terakhir berikut untuk masuk ke aplikasi PasarCepat"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"/>
+
+    <!-- Full Name -->
+    <TextView
+        android:id="@+id/lblFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"/>
+
+    <EditText
+        android:id="@+id/etFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_search_rounded"
+        android:padding="16dp"
+        android:hint="Masukan Nama Lengkap Anda"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/lblFullName"/>
+
+    <!-- Password -->
+    <TextView
+        android:id="@+id/lblPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFullName"/>
+
+    <LinearLayout
+        android:id="@+id/containerPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_search_rounded"
+        android:gravity="center_vertical"
+        android:paddingEnd="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/lblPass">
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:padding="16dp"
+            android:inputType="textPassword"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/ivTogglePassword"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_visibility_off"
+            app:tint="@color/text_secondary"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutHelper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerPass">
+        
+        <!-- Info Icon Placeholder (using text 'i' or generic icon) -->
+        <ImageView
+             android:layout_width="16dp"
+             android:layout_height="16dp"
+             android:src="@drawable/ic_launcher_foreground"
+             app:tint="@color/text_secondary"
+             android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Kata sandi harus 6 karakter atau lebih"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!-- Referral Code -->
+    <TextView
+        android:id="@+id/lblReferral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Referal Code (Optional)"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutHelper"/>
+
+    <EditText
+        android:id="@+id/etReferral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_search_rounded"
+        android:padding="16dp"
+        android:hint="Input your code"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/lblReferral"/>
+
+
+    <Button
+        android:id="@+id/btnConfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Confirmation"
+        android:backgroundTint="@color/primary_blue"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginBottom="32dp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

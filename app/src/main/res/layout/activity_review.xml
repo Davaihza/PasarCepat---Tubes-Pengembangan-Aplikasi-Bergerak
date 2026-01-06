@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
+
+    <!-- Header -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Review Product"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_star_filled"
+                app:tint="#FFC107" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="4.6"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Summary Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="32dp">
+
+                <!-- Big Rating -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="bottom">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.6"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/5"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginStart="2dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="86 Reviews"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <!-- Rating Bars -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical">
+
+                    <!-- 5 Stars -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                         <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                          <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                           <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                        
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="6dp"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:progress="80"
+                            android:progressTint="#FFC107"
+                            android:progressBackgroundTint="#EEEEEE"/>
+                        <TextView android:layout_width="20dp" android:layout_height="wrap_content" android:text="70" android:textSize="10sp" android:gravity="end"/>
+                    </LinearLayout>
+
+                     <!-- 4 Stars -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                         <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                          <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                           <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#E0E0E0"/>
+                        
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="6dp"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:progress="10"
+                            android:progressTint="#FFC107"
+                            android:progressBackgroundTint="#EEEEEE"/>
+                        <TextView android:layout_width="20dp" android:layout_height="wrap_content" android:text="5" android:textSize="10sp" android:gravity="end"/>
+                    </LinearLayout>
+                    
+                    <!-- 3 Stars -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                         <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                          <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#E0E0E0"/>
+                           <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#E0E0E0"/>
+                        
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="6dp"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:progress="15"
+                            android:progressTint="#FFC107"
+                            android:progressBackgroundTint="#EEEEEE"/>
+                        <TextView android:layout_width="20dp" android:layout_height="wrap_content" android:text="8" android:textSize="10sp" android:gravity="end"/>
+                    </LinearLayout>
+                    
+                    <!-- 2 Stars -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                         <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#E0E0E0"/>
+                          <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#E0E0E0"/>
+                           <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#E0E0E0"/>
+                        
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="6dp"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:progress="5"
+                            android:progressTint="#FFC107"
+                            android:progressBackgroundTint="#EEEEEE"/>
+                         <TextView android:layout_width="20dp" android:layout_height="wrap_content" android:text="2" android:textSize="10sp" android:gravity="end"/>
+                    </LinearLayout>
+                    
+                     <!-- 1 Stars -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#FFC107"/>
+                         <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#E0E0E0"/>
+                          <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#E0E0E0"/>
+                           <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#E0E0E0"/>
+                           <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_filled" app:tint="#E0E0E0"/>
+                        
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="6dp"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:progress="2"
+                            android:progressTint="#FFC107"
+                            android:progressBackgroundTint="#EEEEEE"/>
+                        <TextView android:layout_width="20dp" android:layout_height="wrap_content" android:text="1" android:textSize="10sp" android:gravity="end"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Reviews Recycler -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_review"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

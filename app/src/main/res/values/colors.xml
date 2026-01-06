@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- App Colors -->
+    <color name="primary_blue">#3D5AFE</color>
+    <color name="primary_variant">#304FFE</color>
+    <color name="background_light">#F8F9FA</color>
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+    <color name="price_color">#E53935</color>
+    <color name="star_color">#FFD700</color>
+    <color name="divider">#EEEEEE</color>
+    
+    <!-- Category Colors -->
+    <color name="cat_food_bg">#E8F5E9</color>
+    <color name="cat_food_icon">#4CAF50</color>
+    <color name="cat_gift_bg">#FFF3E0</color>
+    <color name="cat_gift_icon">#FF9800</color>
+    <color name="cat_fashion_bg">#FFF8E1</color>
+    <color name="cat_fashion_icon">#FFC107</color>
+    <color name="cat_gadget_bg">#E3F2FD</color>
+    <color name="cat_gadget_icon">#2196F3</color>
+    <color name="cat_compute_bg">#F3E5F5</color>
+    <color name="cat_compute_icon">#9C27B0</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="blue_primary">#3D5AFE</color>
+</resources>
